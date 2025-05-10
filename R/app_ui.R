@@ -87,10 +87,7 @@ app_ui <- function(request) {
               card_footer(
                 layout_column_wrap(
                   width = 1,
-                  p(
-                    paste("Once you have filled it in, please uploaded it using the 'Browse' button and click the 'Load' button.")
-                  ),
-                  fileInput("excel_file", "Excel file"),
+                  fileInput("excel_file", "Once you have filled it in, please uploaded it using the 'Browse' button"),
                 )
                 # layout_column_wrap(
                 #   width = 1,
@@ -221,11 +218,37 @@ app_ui <- function(request) {
               )
             ),
             layout_column_wrap(
-              width = 1/3,
-              "Version 0.1.0",
-              actionButton("documentation", "Documentation", icon = icon("book")),
-              actionButton("issue", "Found an issue?")
+              width = 1/2,
+              layout_column_wrap(
+                width = 1,
+                "Version 0.1.0 (May 2025)",
+                tags$a(
+                  class="btn btn-warning",
+                  "Found an issue?",
+                  href = "mailto:alberto.garre@upct.es?subject=%5BR4EU%5D%20SoilDiverAgroAppu&body=First%20Name%3A%0D%0ALast%20Name%3A%0D%0AOrganization%3A%0D%0ACountry%3A%0D%0ASoftware Version%3A%201.0.1%0D%0AFeedback%20or%20Issue%3A"
+                )
+              ),
+              layout_column_wrap(
+                width = 1,
+                actionButton("documentation", "Soil methods"),
+                tags$a(
+                  class="btn btn-secondary",
+                  "User manual",
+                  href = "https://docs.google.com/document/d/1JQ7n-8D-NPpI-jW8znUBNIqN7W-wut0thtNoIJLIVT8/edit?usp=sharing"
+                )
+              )
             )
+            # layout_column_wrap(
+            #   width = 1/3,
+            #   "Version 0.1.0",
+            #   actionButton("documentation", "Documentation", icon = icon("book")),
+            #   # actionButton("issue", "Found an issue?")
+            #   tags$a(
+            #     class="btn btn-warning",
+            #     "Found an issue?",
+            #     href = "mailto:alberto.garre@upct.es?subject=%5BR4EU%5D%20SoilDiverAgroAppu&body=First%20Name%3A%0D%0ALast%20Name%3A%0D%0AOrganization%3A%0D%0ACountry%3A%0D%0ASoftware Version%3A%201.0.1%0D%0AFeedback%20or%20Issue%3A"
+            #   )
+            # )
             # layout_column_wrap(
             #   width = 1/2,
             #   card(

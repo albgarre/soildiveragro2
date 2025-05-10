@@ -5,7 +5,7 @@ account: foodlab-upct
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 14245304
-bundleId:
+bundleId: 10261624
 url: https://foodlab-upct.shinyapps.io/soildiveragro/
 asMultiple: FALSE
 asStatic: FALSE

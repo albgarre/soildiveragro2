@@ -205,7 +205,7 @@ app_server <- function(input, output, session) {
 
   output$summary_inputs <- renderTable({
 
-    validate(need(d_new(), message = ""))
+    validate(need(d_new(), message = "Please upload an Excel file"))
 
     d_new() %>%
       select(sample, tillage, fertilization, pesticides, starts_with("PedoC"))
@@ -213,7 +213,7 @@ app_server <- function(input, output, session) {
 
   output$plot_physico <- renderPlot({
 
-    validate(need(d_new(), message = ""))
+    validate(need(d_new(), message = "Please upload an Excel file"))
 
     # browser()
 
@@ -233,7 +233,7 @@ app_server <- function(input, output, session) {
 
   output$plot_climate <- renderPlot({
 
-    validate(need(d_new(), message = ""))
+    validate(need(d_new(), message = "Please upload an Excel file"))
 
     d_new() %>%
       select(sample,
@@ -253,7 +253,7 @@ app_server <- function(input, output, session) {
 
   output$out_predictions <- renderTable({
 
-    validate(need(pred_new(), message = ""))
+    validate(need(pred_new(), message = "Please upload an Excel file"))
 
     pred_new() %>%
       set_names(c("Sample code", "Bacterial biodiversity", "Fungal biodiversity", "Nematode biodiversity", "Yield [UNIT]"))
