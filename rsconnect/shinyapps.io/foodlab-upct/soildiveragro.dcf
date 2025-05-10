@@ -1,0 +1,11 @@
+name: soildiveragro
+title: soildiveragro
+username:
+account: foodlab-upct
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14245304
+bundleId:
+url: https://foodlab-upct.shinyapps.io/soildiveragro/
+asMultiple: FALSE
+asStatic: FALSE
